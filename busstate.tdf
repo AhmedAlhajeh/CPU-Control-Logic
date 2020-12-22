@@ -1,0 +1,35 @@
+SUBDESIGN BusState
+(
+   RD,WR,MCLK,RESET 	: INPUT;
+   ARD,AWR : OUTPUT;
+)
+
+VARIABLE
+	BusState :	MACHINE OF BITS (ARD,AWR) WITH STATES 
+	(
+		IDLE = B"00",
+		READING = B"10",
+		WRITING = B"01",
+		HOLD = B"00"
+	);
+BEGIN
+   	BusState.clk = NOT MCLK;
+   	BusState.reset =  RESET;
+	TABLE
+		BusState,	WR,	RD	=> 	BusState;
+		
+		IDLE,		0,	0	=> 	IDLE;
+		IDLE,		X,	1	=>	READING;
+		IDLE,		1,	X	=>	WRITING;
+		
+		READING,	X,	1	=>	IDLE;
+		READING,	X,  0   =>  IDLE;
+		
+		WRITING,	1,	X	=>	IDLE;
+		WRITING,	0,  X   =>  IDLE;
+
+		HOLD,  		0,  0   =>  IDLE;
+		HOLD,		1,	X	=>	HOLD;
+		HOLD,		X,  1	=>	HOLD;
+	END TABLE;
+END;

@@ -1,0 +1,8 @@
+(
+	q_sig[]
+) = ProgramROM	(
+	.address[] = address_sig[]
+)
+RETURNS (
+	.q[]
+);

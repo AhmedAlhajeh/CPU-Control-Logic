@@ -1,0 +1,160 @@
+Flow report for cpu_top_sim
+Wed Oct 14 16:49:43 2020
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Flow Summary                                                                      ;
++---------------------------------+-------------------------------------------------+
+; Flow Status                     ; Successful - Wed Oct 14 16:49:43 2020           ;
+; Quartus Prime Version           ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
+; Revision Name                   ; cpu_top_sim                                     ;
+; Top-level Entity Name           ; cpu_top_sim                                     ;
+; Family                          ; Cyclone V                                       ;
+; Device                          ; 5CGXFC7C7F23C8                                  ;
+; Timing Models                   ; Final                                           ;
+; Logic utilization (in ALMs)     ; 270 / 56,480 ( < 1 % )                          ;
+; Total registers                 ; 191                                             ;
+; Total pins                      ; 122 / 268 ( 46 % )                              ;
+; Total virtual pins              ; 0                                               ;
+; Total block memory bits         ; 131,072 / 7,024,640 ( 2 % )                     ;
+; Total DSP Blocks                ; 0 / 156 ( 0 % )                                 ;
+; Total HSSI RX PCSs              ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI PMA RX Deserializers ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI TX PCSs              ; 0 / 6 ( 0 % )                                   ;
+; Total HSSI PMA TX Serializers   ; 0 / 6 ( 0 % )                                   ;
+; Total PLLs                      ; 0 / 13 ( 0 % )                                  ;
+; Total DLLs                      ; 0 / 4 ( 0 % )                                   ;
++---------------------------------+-------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 10/14/2020 11:44:07 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; cpu_top_sim         ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 165363155346878.160269024511856        ; --            ; --          ; --         ;
+; CUT_OFF_READ_DURING_WRITE_PATHS     ; Off                                    ; On            ; --          ; --         ;
+; EXCLUDE_TPD_PATHS_LESS_THAN         ; 0 ns                                   ; --            ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top        ;
++-------------------------------------+----------------------------------------+---------------+-------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:01:34     ; 1.0                     ; 773 MB              ; 00:02:16                           ;
+; Fitter               ; 00:33:10     ; 1.0                     ; 2421 MB             ; 01:09:49                           ;
+; Assembler            ; 00:00:15     ; 1.0                     ; 711 MB              ; 00:00:15                           ;
+; Timing Analyzer      ; 00:00:23     ; 1.2                     ; 1093 MB             ; 00:00:26                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 587 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 596 MB              ; 00:00:03                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 587 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 596 MB              ; 00:00:04                           ;
+; MIF/HEX Update       ; 00:00:05     ; 1.0                     ; 747 MB              ; 00:00:05                           ;
+; Assembler            ; 00:00:13     ; 1.0                     ; 713 MB              ; 00:00:13                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 589 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 598 MB              ; 00:00:03                           ;
+; MIF/HEX Update       ; 00:00:15     ; 1.0                     ; 749 MB              ; 00:00:15                           ;
+; Assembler            ; 00:00:37     ; 1.0                     ; 719 MB              ; 00:00:36                           ;
+; EDA Netlist Writer   ; 00:00:06     ; 1.0                     ; 591 MB              ; 00:00:06                           ;
+; EDA Netlist Writer   ; 00:00:07     ; 1.0                     ; 601 MB              ; 00:00:07                           ;
+; Total                ; 00:37:02     ; --                      ; --                  ; 01:14:25                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Flow OS Summary                                                                   ;
++----------------------+------------------+-----------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++----------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; Fitter               ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler            ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; Timing Analyzer      ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; MIF/HEX Update       ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler            ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; MIF/HEX Update       ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; Assembler            ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; PROSAFENB02      ; Windows 7 ; 6.1        ; x86_64         ;
++----------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off cpu_top_sim -c cpu_top_sim
+quartus_fit --read_settings_files=off --write_settings_files=off cpu_top_sim -c cpu_top_sim
+quartus_asm --read_settings_files=off --write_settings_files=off cpu_top_sim -c cpu_top_sim
+quartus_sta cpu_top_sim -c cpu_top_sim
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cpu_top_sim -c cpu_top_sim --vector_source=Waveform.vwf --testbench_file=simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=simulation/qsim/ cpu_top_sim -c cpu_top_sim
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cpu_top_sim -c cpu_top_sim --vector_source=Waveform.vwf --testbench_file=simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=simulation/qsim/ cpu_top_sim -c cpu_top_sim
+quartus_cdb cpu_top_sim -c cpu_top_sim --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off cpu_top_sim -c cpu_top_sim
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cpu_top_sim -c cpu_top_sim --vector_source=Waveform.vwf --testbench_file=simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=simulation/qsim/ cpu_top_sim -c cpu_top_sim
+quartus_cdb cpu_top_sim -c cpu_top_sim --update_mif
+quartus_asm --read_settings_files=on --write_settings_files=off cpu_top_sim -c cpu_top_sim
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off cpu_top_sim -c cpu_top_sim --vector_source=Waveform.vwf --testbench_file=simulation/qsim/Waveform.vwf.vht
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=simulation/qsim/ cpu_top_sim -c cpu_top_sim
+
+
+

@@ -1,0 +1,80 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use work.opcodes.all;
+
+ENTITY controllogic_vhdl is
+PORT ( 
+	CLK : IN STD_LOGIC;
+	RESET : IN STD_LOGIC;
+	MBUSY		: IN STD_LOGIC;
+	IR		: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	D		: IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+	
+	RD		: OUT STD_LOGIC;
+	WR		: OUT STD_LOGIC;
+	LOAD_MAR : OUT STD_LOGIC;
+	
+	SEL_A_REG : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	OEA_REG : OUT STD_LOGIC;
+	SEL_B_REG : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	OEB_REG : OUT STD_LOGIC;
+	SEL_D_REG : OUT STD_LOGIC_VECTOR(2 DOWNTO 0);
+	LOAD_REG : OUT STD_LOGIC;
+	
+	OE_PC : OUT STD_LOGIC;
+	LOAD_PC : OUT STD_LOGIC;
+	LOAD_IR : OUT STD_LOGIC;
+	ALU_OP : OUT STD_LOGIC_VECTOR(2 DOWNTO 0)
+);
+END controllogic_vhdl;
+
+ARCHITECTURE RTL of controllogic_vhdl IS
+TYPE State_type IS 
+(
+	Zero
+);
+
+	SIGNAL CLUState : State_type;
+
+BEGIN
+	-- The next state logic is in the PROCESS block
+	PROCESS (CLK,RESET)
+	BEGIN
+		IF (RESET = '1') THEN
+			CLUState <= Zero;
+		
+		ELSIF rising_edge(CLK) THEN
+			CASE CLUState IS
+				WHEN  Zero =>
+					CLUState <= Zero;
+				WHEN OTHERS =>
+					CLUState <= Zero;
+			END CASE;
+		END IF;
+	END PROCESS;
+	
+	-- Output logic starts here
+	PROCESS (CLUState, IR)
+	BEGIN	
+		-- Default values for the outputs are set outside the CASE statement
+		RD <= '0';
+		WR	<= '0';
+		LOAD_MAR <= '0';
+		
+		SEL_A_REG <= "000";
+		OEA_REG <= '0';
+		SEL_B_REG <= "000";
+		OEB_REG <= '0';
+		SEL_D_REG <= "000";
+		LOAD_REG <= '0';		
+		OE_PC <= '0';
+		LOAD_PC <= '0';
+		LOAD_IR <= '0';
+		ALU_OP <= NOP (2 DOWNTO 0);
+
+		CASE CLUState IS
+			WHEN  Zero =>
+			WHEN OTHERS  =>
+		END CASE;
+	END PROCESS;
+END ARCHITECTURE RTL;

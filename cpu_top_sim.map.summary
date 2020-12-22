@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Oct 14 11:45:38 2020
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
+Revision Name : cpu_top_sim
+Top-level Entity Name : cpu_top_sim
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 186
+Total pins : 122
+Total virtual pins : 0
+Total block memory bits : 131,072
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 0
+Total DLLs : 0

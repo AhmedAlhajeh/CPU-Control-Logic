@@ -1,0 +1,8 @@
+(
+	result_sig[]
+) = Wire16	(
+	.data0_[] = data0__sig[]
+)
+RETURNS (
+	.result[]
+);

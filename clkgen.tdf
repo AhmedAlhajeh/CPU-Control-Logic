@@ -1,0 +1,42 @@
+SUBDESIGN clkgen
+(
+   FCLK,RESET 	: INPUT;
+   FR,OS : INPUT;
+   MCLK, DCLK: OUTPUT;
+)
+
+VARIABLE
+	clkgen :	MACHINE OF BITS (dummy,DCLK,MCLK) WITH STATES 
+	(
+		IDLE = B"000",
+		FRHH = B"011",
+		FRHL = B"010",
+		FRLH = B"001",
+		OSHH = B"111",
+		OSHL = B"110",
+		OSLH = B"101",
+		OSHOLD = B"100"
+	);
+BEGIN
+   	clkgen.clk = FCLK;
+   	clkgen.reset = RESET;
+	TABLE
+		clkgen,	FR,	OS	=> 	clkgen;
+		
+		IDLE,		1,	X	=> 	FRHH;
+		IDLE,		0,  1   =>  IDLE;
+		IDLE,		0,	0	=>  OSHH;
+		
+		FRHH,		X,X		=>  FRHL;
+		FRHL,		X,X		=>  FRLH;
+		FRLH,		X,X		=>  IDLE;
+		
+		OSHH,		X,X		=>	OSHL;
+		OSHL,		X,X		=>  OSLH;
+		OSLH,		X,X		=>  OSHOLD;
+		
+		OSHOLD,		1,x		=> IDLE;
+		OSHOLD,		X,0		=>  OSHOLD;
+		OSHOLD,		X,1		=>	IDLE;
+	END TABLE;
+END;

@@ -1,0 +1,11 @@
+
+
+C:/ECE3389/toy489 basic/ProgramROM.tdf
+
+Sep 24 04PM:37:04>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted
+
+C:/ECE3389/toy489 basic/ProgramROM.tdf
+
+Sep 24 04PM:37:06>: Megafunction LPM_ROM is not listed in any 
+wizard.lst file in the specified library path(s).Wizard launch aborted

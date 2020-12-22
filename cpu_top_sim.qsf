@@ -1,0 +1,110 @@
+# Copyright (C) 1991-2004 Altera Corporation
+# Any  megafunction  design,  and related netlist (encrypted  or  decrypted),
+# support information,  device programming or simulation file,  and any other
+# associated  documentation or information  provided by  Altera  or a partner
+# under  Altera's   Megafunction   Partnership   Program  may  be  used  only
+# to program  PLD  devices (but not masked  PLD  devices) from  Altera.   Any
+# other  use  of such  megafunction  design,  netlist,  support  information,
+# device programming or simulation file,  or any other  related documentation
+# or information  is prohibited  for  any  other purpose,  including, but not
+# limited to  modification,  reverse engineering,  de-compiling, or use  with
+# any other  silicon devices,  unless such use is  explicitly  licensed under
+# a separate agreement with  Altera  or a megafunction partner.  Title to the
+# intellectual property,  including patents,  copyrights,  trademarks,  trade
+# secrets,  or maskworks,  embodied in any such megafunction design, netlist,
+# support  information,  device programming or simulation file,  or any other
+# related documentation or information provided by  Altera  or a megafunction
+# partner, remains with Altera, the megafunction partner, or their respective
+# licensors. No other licenses, including any licenses needed under any third
+# party's intellectual property, are provided herein.
+
+
+# The default values for assignments are stored in the file
+#		assignment_defaults.qdf
+
+# Altera recommends that you do not modify this file. This
+# file is updated automatically by the Quartus II software
+# and any changes you make may be lost or overwritten.
+
+
+# Project-Wide Assignments
+# ========================
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "4.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:27:45  FEBRUARY 02, 2006"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Standard Edition"
+set_global_assignment -name AHDL_FILE Zero16.tdf
+set_global_assignment -name AHDL_FILE ALUDecoder.tdf
+set_global_assignment -name AHDL_FILE ArithShift.tdf
+set_global_assignment -name AHDL_FILE BarrelShifter.tdf
+set_global_assignment -name AHDL_FILE blanklogic.tdf
+set_global_assignment -name AHDL_FILE busstate.tdf
+set_global_assignment -name AHDL_FILE clkgen.tdf
+set_global_assignment -name AHDL_FILE GND16.tdf
+set_global_assignment -name AHDL_FILE InstructionRegister.tdf
+set_global_assignment -name AHDL_FILE MUX16.tdf
+set_global_assignment -name AHDL_FILE Pass16.tdf
+set_global_assignment -name AHDL_FILE PCReg.tdf
+set_global_assignment -name AHDL_FILE Reg16.tdf
+set_global_assignment -name AHDL_FILE RegFileAddr.tdf
+set_global_assignment -name AHDL_FILE Wire16.tdf
+set_global_assignment -name AHDL_FILE AdderSubtractor.tdf
+set_global_assignment -name BDF_FILE zeroreg.bdf
+set_global_assignment -name BDF_FILE 8bitsr.bdf
+set_global_assignment -name BDF_FILE alu.bdf
+set_global_assignment -name BDF_FILE busctrll.bdf
+set_global_assignment -name BDF_FILE clkdivide.bdf
+set_global_assignment -name BDF_FILE cpu_top.bdf
+set_global_assignment -name BDF_FILE debounce_rh.bdf
+set_global_assignment -name BDF_FILE programcounter.bdf
+set_global_assignment -name BDF_FILE register16.bdf
+set_global_assignment -name BDF_FILE registerfile.bdf
+set_global_assignment -name BDF_FILE 1bitsr.bdf
+set_global_assignment -name BDF_FILE cpu_top_sim.bdf
+set_global_assignment -name VECTOR_WAVEFORM_FILE cpu_top_sim.vwf
+
+# Timing Assignments
+# ==================
+set_global_assignment -name CUT_OFF_READ_DURING_WRITE_PATHS OFF
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name TOP_LEVEL_ENTITY cpu_top_sim
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name AUTO_RESTART_CONFIGURATION OFF
+set_global_assignment -name DEVICE 5CGXFC7C7F23C8
+set_global_assignment -name MAX7000B_VCCIO_IOBANK2 3.3V
+set_global_assignment -name MAX7000B_VCCIO_IOBANK1 3.3V
+
+# Timing Analysis Assignments
+# ===========================
+set_global_assignment -name EXCLUDE_TPD_PATHS_LESS_THAN 0.0NS
+
+# Simulator Assignments
+# =====================
+set_global_assignment -name GLITCH_INTERVAL 0.0ns
+set_global_assignment -name START_TIME "0 ns"
+set_global_assignment -name END_TIME 800.0us
+
+# ---------------------
+# start BREAKPOINT(bp2)
+
+	# Simulator Assignments
+	# =====================
+	set_global_assignment -name TRIGGER_EQUATION "time > 100ns" -section_id bp2
+	set_global_assignment -name ACTION STOP -section_id bp2
+	set_global_assignment -name BREAKPOINT_STATE ENABLED -section_id bp2
+
+# end BREAKPOINT(bp2)
+# -------------------
+
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VECTOR_WAVEFORM_FILE waveform.vwf
+set_global_assignment -name VHDL_FILE opcodes.VHDL
+set_global_assignment -name VHDL_FILE controllogic_vhdl.vhdl
+set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform1.vwf
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
